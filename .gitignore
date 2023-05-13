@@ -1,3 +1,12 @@
+dist/
+deploy_versions/
+.temp/
+.rn_temp/
+.DS_Store
+.swc
+.editorconfig
+.eslintrc
+
 # Logs
 logs
 *.log
@@ -89,7 +98,6 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
@@ -101,7 +109,6 @@ dist
 .vuepress/dist
 
 # vuepress v2.x temp and cache directory
-.temp
 .cache
 
 # Docusaurus cache and generated files
@@ -128,3 +135,4 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
