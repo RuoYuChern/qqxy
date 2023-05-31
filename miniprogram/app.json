@@ -1,0 +1,23 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/talks/xintalk",
+        "pages/talks/zhongle",
+        "pages/talks/wenti"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "细语",
+        "navigationBarTextStyle": "black"
+    },
+    "networkTimeout": {
+        "request": 3000
+    },
+    "useExtendedLib": {
+        "weui": "latest"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,37 @@
+<!--pages/xiyu/xiyu.wxml-->
+<view class="page">
+  <view class="page-body">
+    <view class="page-section page-section-spacing weui-flex">
+        <block wx:if="{{canIUseOpenData}}">
+            <view class="userinfo-avatar">
+                <open-data type="userAvatarUrl"></open-data>
+            </view>
+            <open-data type="userNickName"></open-data>
+        </block>
+        <block wx:elif="{{!hasUserInfo}}">
+            <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+            <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+            <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+        </block>
+        <block wx:else>
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{'欢迎' + userInfo.nickName}}</text>
+        </block>
+    </view>
+    <view class="page-section page-section-spacing">
+        <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <xy-card src="/assets/like.png" title="{{item}}" bindclick="cardClick">
+                <view class="xy-card__content xy-padding">这是一个基础卡片的示例，此处为自定义内容区域，自行控制内容样式。</view>
+            </xy-card>
+          </swiper-item>
+        </block>
+        </swiper>
+    </view>
+    <view class="page-section page-section-spacing">
+        <mp-grids grids="{{talks}}"></mp-grids>
+    </view>
+  </view>  
+</view>
+

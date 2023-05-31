@@ -1,0 +1,7 @@
+<!--pages/talks/xintalk.wxml-->
+<view class="page">
+    <view class="page-body">
+        <xinTalk></xinTalk>
+    </view>
+</view>
+

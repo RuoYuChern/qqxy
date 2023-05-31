@@ -1,0 +1,62 @@
+/* pages/xiyu/xiyu.wxss */
+@import '../../common.wxss';
+
+.weui-flex{
+    align-items: center; 
+    justify-content: center;   
+}
+
+.xy-section__title {
+    margin-left: 32rpx;
+}
+ 
+.xy-card__content {
+    font-size: 28rpx;
+    padding: 32rpx 20rpx;
+    box-sizing: border-box;
+}
+  
+.xy-padding {
+    padding-left: 32rpx;
+    padding-right: 32rpx;
+}
+  
+.xy-list__item {
+    width: 100%;
+    height: 385rpx;
+    position: relative;
+    background: #eee;
+}
+  
+.xy-cover {
+    width: 100%;
+    height: 385rpx;
+    display: block;
+}
+  
+.xy-list__title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    font-weight: 500;
+    padding: 24rpx 20rpx;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+}
+  
+.xy-card__title {
+    width: 100%;
+    padding: 32rpx;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+
+.userinfo-avatar {
+    overflow: hidden;
+    width: 128rpx;
+    height: 128rpx;
+    margin: 20rpx;
+    border-radius: 50%;
+}
+

@@ -1,0 +1,95 @@
+<scroll-view class="page-section">
+    <image wx:if="{{history.loading}}" class="history-loaded" src="/assets/loading.svg"/>
+    <view wx:else>
+        <view class="history-loaded" wx:if="{{history.allLoaded}}">已经没有更多的历史消息</view>
+        <view class="load" wx:else>下拉获取历史消息</view>
+    </view>
+    <checkbox-group bindchange="selectMessages">
+        <view wx:for="{{history.messages}}" wx:for-index="index" wx:key="index" wx:for-item="msg">
+            <view class="time-lag">{{msg.showTime}}</view>
+            <!--消息内容-->
+            <view class="message-recalled" wx:if="{{msg.recalled}}">
+                <view wx:if="{{msg.senderId !== currentUser.id}}">{{msg.name}}撤回了一条消息</view>
+                <view wx:else class="message-recalled-self">
+                    <view>你撤回了一条消息</view>
+                    <view class="re-edit" wx:if="{{msg.editable}}" data-text="{{msg.payload.text}}"bindtap="reEditMsg">重新编辑
+                    </view>                    
+                </view>
+            </view>
+            <view class="message-item" wx:else>
+                <view class="message-item-checkbox" wx:if="{{messageSelector.visible}}">
+                    <checkbox value="{{msg.messageId}}" checked="{{msg.checked}}"/>
+                </view>
+                <view class="{{msg.senderId === currentUser.id ? 'message-item-content self' : 'message-item-content'}}">
+                    <view class="avatar"><image src="{{msg.avatar}}"></image></view>
+                    <view class="content" data-messageid="{{msg.messageId}}" bindlongpress="showActPopup">
+                        <view class="message-payload">
+                            <image src="/assets/pending.gif" class="pending" wx:if="{{msg.status === 'sending'}}"></image>
+                            <image src="/assets/failed.png" class="send-fail"wx:if="{{msg.status == 'fail'}}"></image>
+                            <rich-text wx:if="{{msg.type ==='text'}}" class="text-content" nodes="{{msg.node}}"></rich-text>
+                            <image wx:if="{{msg.type === 'image'}}" class="image-content" 
+                                src="{{msg.payload.url}}" bindtap="viewImg" data-src="{{msg.payload.url}}" mode="widthFix"/>
+                            <view wx:if="{{msg.type ==='audio'}}" class="audio-content" bindtap="playAudio" data-message="{{msg}}">
+                                <view class="audio-facade" style="width:{{msg.width}}">
+                                    <image wx:if="{{audioPlayer.playingMsg.messageId === msg.messageId}}"
+                                                class="audio-facade-bg audio-play-icon" src="/assets/play.gif"></image>
+                                    <image wx:else class="audio-facade-bg" src="/assets/voice2.png"></image>
+                                    <view class="record-second">{{msg.finalDuration}}"</view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="{{msg.read ?'message-read':'message-unread'}}">
+                            <view wx:if="{{msg.senderId === currentUser.id && msg.status==='success'}}">
+                                        {{msg.read ? '已读' : '未读'}}
+                            </view>
+                        </view>
+                    </view>
+                </view>       
+            </view>
+        </view>
+    </checkbox-group>
+</scroll-view>
+<!--发送消息，视频，语音，自定义消息操作-->
+<view class="page-section action-box" wx:if="{{!messageSelector.visible}}">
+    <view class="action-top">
+        <view bindtap="switchAudioKeyboard" class="action-icon">
+            <image class="more" wx:if="{{audio.visible}}" src="/assets/keyboard.png"></image>
+            <image class="more" wx:else src="/assets/audio.png"></image>
+        </view>
+        <!-- 录音 -->
+        <GoRecord style="flex: 1;" wx:if="{{audio.visible}}" bind:onStop="onRecordStop"></GoRecord>
+        <input wx:else type="text" maxlength="700" placeholder="发送消息" confirm-hold hold-keyboard="{{true}}"
+            adjust-position="{{true}}" data-text="text" class="consult-input" bindfocus="msgInFocusin" 
+            model:value="{{text}}"/>
+        <view bindtap="switchEmojiKeyboard">
+            <image class="more" wx:if="{{emoji.visible}}" src="/assets/keyboard.png"></image>
+            <image class="more" wx:else src="/assets/emotion.png"></image>
+        </view>            
+        <view wx:if="{{!text}}" ><image bindtap="showOtherTypes" class="more" src="/assets/plus.png"/></view>
+        <view wx:else class="send-btn-box"><text class="btn" bindtap="sendTxtMsg">发送</text></view>
+    </view>
+    <!--展示表情列表-->
+    <view class="action-bottom action-bottom-emoji" wx:if="{{emoji.visible}}">
+        <image class="emoji-item" wx:for="{{emoji.map}}" wx:for-item="emojiItem" wx:for-index="key" wx:key="key"
+        src="{{emoji.url + emojiItem}}" bindtap="chooseEmoji" data-emojiKey="{{key}}"></image>
+    </view>
+    <!--展示其他消息类型面板-->
+    <view class="action-bottom" wx:if="{{otherTypesMessagePanelVisible}}">
+        <view class="more-item" bindtap="sendImageMsgs">
+            <image class="operation-icon" src="/assets/picture.png"></image>
+            <text class="operation-title">图片</text>
+        </view>
+    </view>    
+</view>
+<view class="page-section action-popup" wx:if="{{actionPopup.visible}}">
+    <view class="layer"></view>
+    <view class="action-box">
+        <view class="action-item" bindtap="deleteSingleMessage">删除</view>
+        <view class="action-item" wx:if="{{actionPopup.recallable}}" bindtap="recallMessage">撤回</view>
+        <view class="action-item" bindtap="showCheckBox">多选</view>
+        <view class="action-item" bindtap="hideActionPopup">取消</view>
+    </view>
+</view>
+<view class="messageSelector-box" wx:if="{{messageSelector.visible}}">
+    <image class="messageSelector-btn" bindtap="deleteMultipleMessages" src="/assets/delete.png"></image>
+</view>

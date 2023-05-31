@@ -1,0 +1,20 @@
+/**index.wxss**/
+@media only screen and (min-width: 450px) {
+    .footerbar {
+      position:fixed;
+      top: 0;
+      bottom:0;
+      width: unset;
+      height: 100%;
+      left:0;
+      right: unset;
+    }
+}
+
+.footerbar {
+    position:fixed;
+    bottom:0;
+    width:100%;
+    left:0;
+    right:0;
+}

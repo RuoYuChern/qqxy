@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<page-meta root-font-size="system"></page-meta>
+<view>
+    <block wx:if="{{tabIndex === 0}}">
+            <tab-xiyu></tab-xiyu>
+    </block>
+    <block wx:if="{{tabIndex === 1}}">
+         <tab-yuedu></tab-yuedu>
+    </block>    
+    <block wx:if="{{tabIndex === 2}}">
+         <tab-xinsheng></tab-xinsheng>
+    </block> 
+    <block wx:if="{{tabIndex === 3}}">
+        <tab-yinyue></tab-yinyue>
+    </block>   
+    <block wx:if="{{tabIndex === 4}}">
+        <tab-me></tab-me>
+    </block>              
+    <mp-tabbar class="footerbar" list="{{list}}" bindchange="switchTab"></mp-tabbar>
+</view>
