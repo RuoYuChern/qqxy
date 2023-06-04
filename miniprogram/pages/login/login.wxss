@@ -1,0 +1,55 @@
+/* @import '../../common.wxss'; */
+
+.container{
+	display: flex;
+	align-items: center;
+    flex-direction: column;
+	width: 100%;
+	height: 100%;
+	font-family: Source Han Sans CN;    
+}
+
+.title {
+	width: 100%;
+	font-size: 48rpx;
+	font-style: normal;
+	font-weight: bold;
+	color: #D02129;
+    text-align: center;
+    margin-top: 140rpx;
+	margin-bottom: 70rpx;
+}
+
+.avatar{
+    width: 240rpx;
+    height: 200rpx;
+    padding:0;
+    background: none;
+}
+.avatar image{
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 200rpx;
+}
+.weui-input{
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    width: 400rpx;
+    height: 70rpx;
+    margin:20px auto;
+    background: #eee;
+    border-radius: 10rpx;
+    padding-left: 60rpx;
+}
+
+.login-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    width: 500rpx;
+    height: 70rpx;
+	color: #FFFFFF;
+    background: #D02129;
+    border-radius: 10rpx;
+}

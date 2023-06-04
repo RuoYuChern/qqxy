@@ -23,7 +23,7 @@
         <block wx:for="{{background}}" wx:key="*this">
           <swiper-item>
             <xy-card src="/assets/like.png" title="{{item}}" bindclick="cardClick">
-                <view class="xy-card__content xy-padding">这是一个基础卡片的示例，此处为自定义内容区域，自行控制内容样式。</view>
+                <view class="xy-card__content xy-padding">这是一个基础卡片的示例。</view>
             </xy-card>
           </swiper-item>
         </block>

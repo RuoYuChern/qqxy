@@ -1,2 +1,11 @@
 <!--pages/yuedu/yuedu.wxml-->
-<text>pages/yuedu/yuedu.wxml</text>
+<view class="page">
+    <view class="page-body">
+        <view class="page-section">
+            <view class="wz" wx:for="{{articList}}" wx:for-index="index" wx:key="index" wx:for-item="wz">
+                <wz-intro id="{{wz.id}}" picture="{{wz.img}}" title="{{wz.title}}" intro="{{wz.desc}}" author="simon.chen"
+                time="2023.0603" bindclick="blogClick"></wz-intro>
+            </view>
+        </view>
+    </view>
+</view>

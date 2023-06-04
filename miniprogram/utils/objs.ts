@@ -25,6 +25,16 @@ export class IMUser{
     avatar: string = "";
 }
 
+export class Article{
+    id:string = "";
+    type:string = "";
+    title: string = "";
+    desc: string = "";
+    img: string = "";
+    url: string = "";
+    payload: {} = {}
+}
+
 export const toMessage = (type: string, raw: any, usr:IMUser)=>{
     var t = Date.now();
     let payload = {};
@@ -33,20 +43,19 @@ export const toMessage = (type: string, raw: any, usr:IMUser)=>{
     }else if(type === "image"){
         payload = {url: raw.content}
     }
-    let msg: Message ={
-        type: type,
-        node: "",
-        messageId: toUUID(t),
-        senderId: usr.id,
-        name: usr.nickName,
-        avatar: usr.avatar,
-        showTime: "",
-        timestamp: t,
-        finalDuration: raw.finalDuration,
-        status:"sending",
-        size: raw.size,
-        width: raw.width,
-        payload:payload
-    }
+    var msg = new Message();
+    msg.type = type;
+    msg.node = "";
+    msg.messageId = toUUID(t);
+    msg.senderId = usr.id;
+    msg.name = usr.nickName;
+    msg.avatar = usr.avatar;
+    msg.showTime = "";
+    msg.timestamp = t;
+    msg.finalDuration = raw.finalDuration;
+    msg.status = "sending";
+    msg.size = raw.size;
+    msg.width = raw.width;
+    msg.payload = payload;
     return msg;
 }

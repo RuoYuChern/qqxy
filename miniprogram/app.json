@@ -4,7 +4,8 @@
         "pages/logs/logs",
         "pages/talks/xintalk",
         "pages/talks/zhongle",
-        "pages/talks/wenti"
+        "pages/talks/wenti",
+        "pages/login/login"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -19,5 +20,6 @@
         "weui": "latest"
     },
     "style": "v2",
+    "lazyCodeLoading": "requiredComponents",
     "sitemapLocation": "sitemap.json"
 }

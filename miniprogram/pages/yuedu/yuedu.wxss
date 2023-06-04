@@ -1,1 +1,6 @@
 /* pages/yuedu/yuedu.wxss */
+@import '../../common.wxss';
+
+.wz{
+    margin-bottom: 15rpx;
+}

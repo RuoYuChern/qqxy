@@ -14,8 +14,8 @@ Component({
         {imgUrl:'/assets/talk.png',url:'/pages/talks/zhongle',text:'众乐'},
         {imgUrl:'/assets/wenti.png',url:'/pages/talks/wenti',text:'解惑'}]
     },
-    pageLifetimes:{
-        show:function(){
+    lifetimes:{
+        ready:function(){
             // @ts-ignore
             var canIUse = this.data.canIUseGetUserProfile
             if (!canIUse && wx.getUserProfile) {

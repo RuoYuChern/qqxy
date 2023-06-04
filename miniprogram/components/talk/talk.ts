@@ -2,10 +2,6 @@
 import { Message,IMUser,toMessage} from '../../utils/objs';
 import {formatDate} from '../../utils/util';
 
-let historyMsgs: Message[] = [];
-let selectedMsgs: Message[] = [];
-let defUser:IMUser = {};
-
 Component({
     options: {
         addGlobalClass: true,
@@ -26,16 +22,16 @@ Component({
      */
     data: {
         text: '',
-        friend: defUser,
+        friend: new IMUser(),
         to: {},// 作为createMessage的参数
-        currentUser: defUser,
+        currentUser: new IMUser(),
         otherTypesMessagePanelVisible: false,
         emoji: {
             visible: false,
             map:{}
         },
         history: {
-            messages: historyMsgs,
+            messages: Array<Message>(),
             allLoaded: false,
             loading: false
         },
@@ -57,11 +53,11 @@ Component({
         // 消息选择
         messageSelector: {
             visible: false,
-            messages: selectedMsgs
+            messages: Array<Message>()
         }        
     },
     lifetimes: {
-        created(){
+        created: function(){
             //var usi = getApp().globalData.userInfo
             let cur: IMUser={id:"987", nickName: "Simon.Chen", avatar:"/assets/xx.png"}
             if(this.properties.type === "XinLiao"){
@@ -109,7 +105,7 @@ Component({
         },
         showActPopup(e:any){
             const selectedMessageId = e.currentTarget.dataset.messageid;
-            let selectedMessage: Message = {};
+            let selectedMessage = new Message();
             this.data.history.messages.forEach(message => {
                 if (message.messageId === selectedMessageId) {
                     selectedMessage = message;
@@ -135,16 +131,18 @@ Component({
         playAudio(e:any){
             let audioMessage = e.currentTarget.dataset.message;
             let playingMessage = this.data.audioPlayer.playingMsg;
-            if (playingMessage) {
-                this.data.audioPlayer.audioCtx.stop();
-                // 如果点击的消息正在播放，就认为是停止播放操作
-                if (playingMessage.messageId === audioMessage.messageId) {
-                    return;
+            if((this.data.audioPlayer != null) && (this.data.audioPlayer.audioCtx != null)){
+                if (playingMessage) {
+                    this.data.audioPlayer.audioCtx.stop();
+                    // 如果点击的消息正在播放，就认为是停止播放操作
+                    if (playingMessage.messageId === audioMessage.messageId) {
+                        return;
+                    }
                 }
+                this.setData({['audioPlayer.playingMessage']: audioMessage});
+                this.data.audioPlayer.audioCtx.src = audioMessage.payload.url;
+                this.data.audioPlayer.audioCtx.play();
             }
-            this.setData({['audioPlayer.playingMessage']: audioMessage});
-            this.data.audioPlayer.audioCtx.src = audioMessage.payload.url;
-            this.data.audioPlayer.audioCtx.play();
         },
         switchAudioKeyboard(){
             // 语音录制按钮和键盘输入的切换

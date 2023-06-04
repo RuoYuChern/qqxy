@@ -1,0 +1,30 @@
+@import '../../common.wxss';
+
+.bgcard__flex {
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    background-color: var(--weui-BG-0);
+    color: var(--weui-FG-1);    
+    box-sizing: border-box;
+}
+
+.bgcard__flex-hd{
+    height: 68rpx;
+    width: 68rpx;
+}
+
+.bgcard__flex-bd{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15rpx;
+}
+
+.bgcard__flex-ft{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 32rpx;
+}
