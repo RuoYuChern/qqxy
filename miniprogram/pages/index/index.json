@@ -5,6 +5,7 @@
       "tab-xinsheng":"/pages/xinsheng/xinsheng",
       "tab-yinyue":"/pages/yinyue/yinyue",
       "tab-me":"/pages/me/me",
-      "mp-tabbar":"weui-miniprogram/tabbar/tabbar"  
+      "van-tabbar": "@vant/weapp/tabbar/index",
+      "van-tabbar-item": "@vant/weapp/tabbar-item/index"
   }
 }

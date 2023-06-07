@@ -1,7 +1,6 @@
 {
     "component": true,
     "usingComponents": {
-        "wz-intro": "../../components/card/blogcard",
         "wz-card": "../../components/card/wzcard"
     }
 }

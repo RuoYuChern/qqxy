@@ -19,7 +19,12 @@
     "lib": ["ES2020"],
     "typeRoots": [
       "./typings"
-    ]
+    ],
+    "paths": {
+        "tdesign-miniprogram/*":["./miniprogram/miniprogram_npm/tdesign-miniprogram/*"],
+        "@vant/weapp/*": ["./miniprogram/miniprogram_npm/@vant/weapp/dist/*"]
+    }
+    
   },
   "include": [
     "./**/*.ts"

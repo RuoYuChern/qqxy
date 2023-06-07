@@ -1,20 +1,18 @@
 /* pages/xiyu/xiyu.wxss */
 @import '../../common.wxss';
 
-.page-body{
-    margin-top: 50rpx;
-}
-.weui-flex{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;   
+
+.avatar{
+    margin-top: 30rpx;
 }
 
-.xy-section__title {
-    margin-left: 32rpx;
+.xy-card{
+    width: 100%;
+    margin-top: 30px;
+    box-sizing: border-box;
+    padding: 0 50rpx;    
 }
- 
+
 .xy-card__content {
     font-size: 28rpx;
     padding: 32rpx 20rpx;
@@ -25,43 +23,10 @@
     padding-left: 32rpx;
     padding-right: 32rpx;
 }
-  
-.xy-list__item {
-    width: 100%;
-    height: 385rpx;
-    position: relative;
-    background: #eee;
-}
-  
-.xy-cover {
-    width: 100%;
-    height: 385rpx;
-    display: block;
-}
-  
-.xy-list__title {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    color: #fff;
-    font-weight: 500;
-    padding: 24rpx 20rpx;
-    box-sizing: border-box;
-    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
-}
-  
-.xy-card__title {
-    width: 100%;
-    padding: 32rpx;
-    box-sizing: border-box;
-    font-weight: 500;
-}
 
-.userinfo-avatar {
-    overflow: hidden;
-    width: 128rpx;
-    height: 128rpx;
-    margin: 20rpx;
-    border-radius: 50%;
+.block {
+    display: block;
+    margin-top: 5rpx;
+    margin-bottom: 32rpx;
 }
 

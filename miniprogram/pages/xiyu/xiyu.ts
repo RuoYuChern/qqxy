@@ -5,7 +5,7 @@ Component({
      */
     data: {
         title: "细语",
-        userInfo: {},
+        userInfo: {avatar:""},
         background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
         talks:[{imgUrl:'/assets/xinliao.png',url:'/pages/talks/xintalk',text:'心聊'},
         {imgUrl:'/assets/talk.png',url:'/pages/talks/zhongle',text:'众乐'},
@@ -20,9 +20,6 @@ Component({
     /**
      * 组件的方法列表
      */
-    methods: {
-        cardClick(e:any){
-            console.log(e)
-        }       
+    methods: {      
     }
 })

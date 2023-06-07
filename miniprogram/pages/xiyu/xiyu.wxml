@@ -1,24 +1,26 @@
 <!--pages/xiyu/xiyu.wxml-->
 <view class="page">
-  <view class="page-body">
-    <view class="page-section page-section-spacing weui-flex">
-        <image class="userinfo-avatar" src="{{userInfo.avatar}}" mode="cover"></image>
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </view>
-    <view class="page-section page-section-spacing">
-        <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500">
-        <block wx:for="{{background}}" wx:key="*this">
-          <swiper-item>
-            <xy-card src="/assets/like.png" title="{{item}}" bindclick="cardClick">
-                <view class="xy-card__content xy-padding">这是一个基础卡片的示例。</view>
-            </xy-card>
-          </swiper-item>
-        </block>
-        </swiper>
-    </view>
-    <view class="page-section page-section-spacing">
-        <mp-grids grids="{{talks}}"></mp-grids>
-    </view>
-  </view>  
+    <view class="container">
+        <t-row>
+            <t-col class="avatar">
+                <t-image src="{{userInfo.avatar}}" width="72" height="72" shape="circle"/>
+                <view>{{userInfo.nickName}}</view>
+            </t-col>
+        </t-row>
+        <t-row class="xy-card">
+            <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500">
+                <swiper-item wx:for="{{background}}" wx:key="*this">
+                    <xy-card src="/assets/like.png" title="{{item}}" bindclick="cardClick">
+                        <view class="xy-card__content xy-padding">这是一个基础卡片的示例。</view>
+                    </xy-card>
+                </swiper-item>
+            </swiper>
+        </t-row>
+        <t-row>
+            <t-grid class="block" column="3" gutter="160" theme="card">
+                <t-grid-item url="{{item.url}}" wx:for="{{talks}}" wx:key="index" text="{{item.text}}" image="{{item.imgUrl}}"/>
+            </t-grid>
+        </t-row>
+    </view>  
 </view>
 

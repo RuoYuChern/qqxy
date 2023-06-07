@@ -1,5 +1,6 @@
 dist/
 deploy_versions/
+miniprogram/miniprogram_npm
 .temp/
 .rn_temp/
 .DS_Store

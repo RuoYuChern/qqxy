@@ -27,8 +27,6 @@ Page({
         })
     },
     login(){
-        //app.globalData.userInfo?.avatarUrl = this.data.avatarUrl
-        console.log("userName:", this.data.nickName)
         if (this.data.nickName.trim() !== '' && this.data.avatarUrl !== defaultAvatarUrl) {
             // 页面跳转
             let app = getApp<TaoIAppOption>();

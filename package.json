@@ -7,8 +7,11 @@
   "author": "",
   "license": "",
   "dependencies": {
+    "@vant/weapp": "^1.10.19",
+    "tdesign-miniprogram": "^1.1.8",
+    "vant-weapp": "^0.5.29"
   },
   "devDependencies": {
-    "miniprogram-api-typings": "^2.8.3-1"
-  }  
+    "miniprogram-api-typings": "^2.12.0"
+  }
 }

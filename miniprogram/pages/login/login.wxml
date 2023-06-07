@@ -2,12 +2,26 @@
 <page-meta root-font-size="system"></page-meta>
 <view class="page">
     <view class="container">
-        <view class="title">授权微信登陆</view>
-        <button class="avatar" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
-            <image src="{{avatarUrl}}"></image>
-        </button> 
-        <input type="nickname" class="weui-input" placeholder="请输入昵称" model:value="{{nickName}}"/>
-        <view wx:if="{{errorVisable}}" class="login-error">请授权昵称和头像</view>
-        <button class="login-btn" bindtap="login">登录</button>
+        <t-row>
+            <t-col class="title">授权微信登陆</t-col>
+        </t-row>
+        <t-row>
+            <t-col>
+                <button class="avatar" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+                    <t-image src="{{avatarUrl}}" width="80" height="80" shape="circle"/>
+                </button> 
+            </t-col>
+        </t-row>
+        <t-row>
+            <t-col>
+                <input class="nick-name" type="nickname" placeholder="请输入昵称" model:value="{{nickName}}"></input>
+            </t-col>
+        </t-row>
+        <t-row wx:if="{{errorVisable}}" >
+            <t-col class="login-error">请授权昵称和头像</t-col>
+        </t-row>
+        <t-row>
+            <t-col><button class="login-btn" bindtap="login">登录</button></t-col>
+        </t-row>
     </view>
 </view>
