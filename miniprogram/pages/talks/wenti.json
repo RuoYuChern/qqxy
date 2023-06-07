@@ -1,3 +1,5 @@
 {
-    "usingComponents": {}
+    "usingComponents": {
+        "xinTalk":"../../components/talk/talk"
+    }
 }

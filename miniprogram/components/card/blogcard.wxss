@@ -1,13 +1,20 @@
 @import '../../common.wxss';
 
-.bgcard__flex {
-    overflow: hidden;
+.bgcard__flex{
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
     background-color: var(--weui-BG-0);
-    color: var(--weui-FG-1);    
+    color: var(--weui-TAG-TEXT-GREEN);    
     box-sizing: border-box;
+}
+
+.bgcard__img{
+    display: flex;
+    margin-top: 20rpx;
+    margin-left: 10rpx;
+    height:100%;
+    width:100%;
 }
 
 .bgcard__flex-hd{

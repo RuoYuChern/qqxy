@@ -1,0 +1,21 @@
+<!-- <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd"><image src="{{picture}}" class="wzcard__img" /></view>
+    <view class="weui-cell__bd weui-cell_primary">
+        <view>{{title}}</view>
+    </view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">
+        <view class="weui-media-box__info">
+            <view class="weui-media-box__info__meta">作者:{{author}}</view>
+            <view class="weui-media-box__info__meta">时间:{{title}}</view>
+        </view>
+    </view>
+</navigator> -->
+
+<navigator url="" class="weui-media-box weui-media-box_text" hover-class="weui-cell_active">
+    <view class="weui-media-box__title weui-media-box__title_in-text">{{title}}</view>
+    <view class="weui-media-box__desc">{{intro}}</view>
+    <view class="weui-media-box__info">
+        <view class="weui-media-box__info__meta">作者:{{author}}</view>
+        <view class="weui-media-box__info__meta">时间:{{title}}</view>
+    </view>
+</navigator>

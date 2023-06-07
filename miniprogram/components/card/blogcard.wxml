@@ -1,7 +1,7 @@
 <!--components/card/blogcard.wxml-->
 <view class="bgcard__flex" bindtap="handleClick">
     <view class="bgcard__flex-hd">
-        <image src="{{picture}}" mode="widthFix" style="height:64rpx;width:64rpx;border-radius:16rpx"></image>
+        <image src="{{picture}}" class="bgcard__img"></image>
     </view>
     <view class="bgcard__flex-bd">
         <text style="font-size: 36rpx;">{{title}}</text>

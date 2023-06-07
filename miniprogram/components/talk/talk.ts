@@ -1,5 +1,6 @@
 // components/talk/talk.ts
 import { Message,IMUser,toMessage} from '../../utils/objs';
+import { Repository } from '../../utils/dao';
 import {formatDate} from '../../utils/util';
 
 Component({
@@ -23,7 +24,7 @@ Component({
     data: {
         text: '',
         friend: new IMUser(),
-        to: {},// 作为createMessage的参数
+        to: new IMUser(),// 作为createMessage的参数
         currentUser: new IMUser(),
         otherTypesMessagePanelVisible: false,
         emoji: {
@@ -58,23 +59,10 @@ Component({
     },
     lifetimes: {
         created: function(){
-            //var usi = getApp().globalData.userInfo
-            let cur: IMUser={id:"987", nickName: "Simon.Chen", avatar:"/assets/xx.png"}
-            if(this.properties.type === "XinLiao"){
-                let frd : IMUser= {id:"XinLiao", nickName:"细语", avatar:"/assets/xx.png"}
-                this.setData({
-                    friend: frd,
-                    currentUser: cur,
-                    to:frd
-                })
-            }else{
-                let frd : IMUser= {id:"ZhongLe", nickName:"细语", avatar:"/assets/xx.png"}
-                this.setData({
-                    friend: frd,
-                    currentUser: cur,
-                    to:frd
-                })
-            }
+            var dao :Repository = getApp<TaoIAppOption>().globalData.dao;
+            let cur = dao.loginUser;
+            let frd = dao.getFriend(this.properties.type); 
+            this.setData({friend: frd,currentUser: cur,to:frd})
             this.__initialAudioPlayer()
         }
     },
@@ -182,6 +170,7 @@ Component({
         },
         onRecordStop(e: any){
             //ToDo
+            console.log("onRecordStop:", e)
         },
         msgInFocusin(){
             this.setData({otherTypesMessagePanelVisible: false,});

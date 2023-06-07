@@ -7,6 +7,7 @@
             <image src="{{avatarUrl}}"></image>
         </button> 
         <input type="nickname" class="weui-input" placeholder="请输入昵称" model:value="{{nickName}}"/>
+        <view wx:if="{{errorVisable}}" class="login-error">请授权昵称和头像</view>
         <button class="login-btn" bindtap="login">登录</button>
     </view>
 </view>

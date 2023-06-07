@@ -1,4 +1,5 @@
-import {toUUID} from './util';
+import { toUUID } from "./util";
+
 export class Message{
     type: string = "";
     node: string = "";

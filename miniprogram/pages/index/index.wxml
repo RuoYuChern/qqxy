@@ -2,7 +2,7 @@
 <page-meta root-font-size="system"></page-meta>
 <view>
     <block wx:if="{{tabIndex === 0}}">
-            <tab-xiyu></tab-xiyu>
+        <tab-xiyu></tab-xiyu>
     </block>
     <block wx:if="{{tabIndex === 1}}">
          <tab-yuedu></tab-yuedu>

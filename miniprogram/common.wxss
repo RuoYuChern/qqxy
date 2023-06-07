@@ -66,12 +66,17 @@ page {
     text-align: center;
   }
   
+.weui-half-screen-dialog__ft .weui-btn {
+    display: inline-block;
+  }
+
   /* page */
   .container {
     display: flex;
     flex-direction: column;
     min-height: 100%;
     justify-content: space-between;
+    align-items: center;
     font-size: 16px;
     font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
   }

@@ -1,7 +1,6 @@
 {
     "component": true,
     "usingComponents": {
-        "mp-icon": "weui-miniprogram/icon/icon",
         "mp-grids": "weui-miniprogram/grids/grids",
         "xy-card":"../../components/card/card"
     }

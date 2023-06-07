@@ -1,7 +1,12 @@
 /* pages/xiyu/xiyu.wxss */
 @import '../../common.wxss';
 
+.page-body{
+    margin-top: 50rpx;
+}
 .weui-flex{
+    display: flex;
+    flex-direction: column;
     align-items: center; 
     justify-content: center;   
 }

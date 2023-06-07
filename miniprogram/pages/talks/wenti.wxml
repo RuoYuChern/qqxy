@@ -1,2 +1,6 @@
 <!--pages/talks/wenti.wxml-->
-<text>pages/talks/wenti.wxml</text>
+<view class="page">
+    <view class="page-body">
+        <xinTalk type="JH"></xinTalk>
+    </view>
+</view>

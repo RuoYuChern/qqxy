@@ -1,16 +1,15 @@
 {
     "pages": [
+        "pages/login/login",
         "pages/index/index",
-        "pages/logs/logs",
         "pages/talks/xintalk",
         "pages/talks/zhongle",
-        "pages/talks/wenti",
-        "pages/login/login"
+        "pages/talks/wenti"
     ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "细语",
+        "navigationBarTitleText": "细语-首页",
         "navigationBarTextStyle": "black"
     },
     "networkTimeout": {
