@@ -1,4 +1,6 @@
 {
+    "navigationBarTitleText": "细语-登录",
+    "component": true,
     "usingComponents": {
         "t-row": "tdesign-miniprogram/row/row",
         "t-col": "tdesign-miniprogram/col/col",

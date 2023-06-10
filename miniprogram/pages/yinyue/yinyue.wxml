@@ -1,2 +1,19 @@
 <!--pages/yinyue/yinyue.wxml-->
-<text>pages/yinyue/yinyue.wxml</text>
+<view class="page" bind:scroll="scroll">
+    <t-divider content="精选({{musics.length}})"/>
+    <t-cell left-icon="{{item.img}}" hover wx:for="{{musics}}" wx:for-index="index" wx:key="index">
+        <view slot="title" class="yinye__title">
+            <view>{{item.title}}</view>
+            <t-tag theme="success" variant="light">播放({{item.loveTimes}})</t-tag>
+        </view>
+        <view slot="description" class="yinye__content">
+            <view>{{item.singer}}-</view>
+            <t-tag theme="success" variant="light">{{item.tags}}</t-tag>
+        </view>
+        <view slot="right-icon">
+            <t-badge offset="{{[-1, 1]}}" count="{{item.loveTimes}}">
+                <t-icon name="heart" size="24"/>
+            </t-badge> 
+        </view>        
+    </t-cell>
+</view>

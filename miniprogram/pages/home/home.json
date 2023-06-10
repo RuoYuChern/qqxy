@@ -1,0 +1,16 @@
+{
+    "navigationBarTitleText": "细语-登录",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+        "pg-scroll":"../../components/pagescroll/pagescroll",
+        "pg-xiyu":"../xiyu/xiyu",
+        "pg-yuedu":"../yuedu/yuedu",
+        "pg-xinsheng":"../xinsheng/xinsheng",
+        "pg-yinyue":"../yinyue/yinyue",
+        "pg-me":"../me/me",
+        "pg-login":"/pages/login/login",
+        "tab-xiyu":"/pages/xiyu/xiyu",
+        "van-tabbar": "@vant/weapp/tabbar/index",
+        "van-tabbar-item": "@vant/weapp/tabbar-item/index"
+    }
+}

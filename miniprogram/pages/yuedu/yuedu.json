@@ -1,6 +1,11 @@
 {
+    "navigationBarTitleText": "细语-阅读",
     "component": true,
     "usingComponents": {
-        "wz-card": "../../components/card/wzcard"
+        "t-cell": "tdesign-miniprogram/cell/cell",
+        "t-avatar": "tdesign-miniprogram/avatar/avatar",
+        "t-badge": "tdesign-miniprogram/badge/badge",
+        "t-divider": "tdesign-miniprogram/divider/divider",
+        "t-icon": "tdesign-miniprogram/icon/icon"        
     }
 }

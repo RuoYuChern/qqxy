@@ -1,5 +1,17 @@
 {
+    "enablePullDownRefresh": true,
     "component": true,
     "usingComponents": {
+        "pg-scroll":"../../components/pagescroll/pagescroll",
+        "t-row": "tdesign-miniprogram/row/row",
+        "t-col": "tdesign-miniprogram/col/col",
+        "t-textarea": "tdesign-miniprogram/textarea/textarea",
+        "t-sticky": "tdesign-miniprogram/sticky/sticky",
+        "t-button": "tdesign-miniprogram/button/button",
+        "t-divider": "tdesign-miniprogram/divider/divider",
+        "t-cell": "tdesign-miniprogram/cell/cell",
+        "t-avatar": "tdesign-miniprogram/avatar/avatar",
+        "t-badge": "tdesign-miniprogram/badge/badge",
+        "t-icon": "tdesign-miniprogram/icon/icon"
     }
 }

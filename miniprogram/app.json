@@ -1,22 +1,27 @@
 {
     "pages": [
-        "pages/login/login",
-        "pages/index/index",
+        "pages/home/home",
+        "pages/yuedu/yuedu",
+        "pages/xinsheng/xinsheng",
+        "pages/yinyue/yinyue",
+        "pages/me/me",
         "pages/talks/xintalk",
         "pages/talks/zhongle",
-        "pages/talks/wenti"
+        "pages/talks/wenti",
+        "pages/blog/blog"
     ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "细语-首页",
+        "navigationBarTitleText": "细语-登录",
         "navigationBarTextStyle": "black"
     },
+    "usingComponents": {},
     "networkTimeout": {
         "request": 3000
     },
     "useExtendedLib": {
-        "weui": "latest"
+        
     },
     "lazyCodeLoading": "requiredComponents",
     "sitemapLocation": "sitemap.json"

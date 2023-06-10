@@ -14,7 +14,9 @@ Component({
     lifetimes:{
         ready:function(){
             // @ts-ignore
-            this.setData({userInfo: getApp<IAppOption>().globalData.dao.loginUser})
+            if(this.data.userInfo.avatar === ""){
+                this.setData({userInfo: getApp<IAppOption>().globalData.dao.loginUser})
+            }
         }
     },
     /**

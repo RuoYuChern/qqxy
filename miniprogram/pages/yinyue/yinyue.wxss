@@ -1,1 +1,19 @@
 /* pages/yinyue/yinyue.wxss */
+
+.yinye_page{
+    height: 100%;
+}
+
+.yinye__title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;    
+}
+
+.yinye__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

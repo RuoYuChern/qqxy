@@ -33,7 +33,29 @@ export class Article{
     desc: string = "";
     img: string = "";
     url: string = "";
+    author: string = "";
+    time: string ="";
+    loveTimes: number = 0;
     payload: {} = {}
+}
+
+export class XinSheng{
+    id: string = "";
+    nickName: string = "";
+    avatar: string = "";
+    content: string = "";
+    time: string ="";
+    loveTimes: number = 0;
+}
+
+export class Music{
+    id: string = "";
+    title: string = "";
+    img: string = "";
+    url: string = "";
+    singer:string = "";
+    loveTimes: number = 0;
+    tags: string[] = [];
 }
 
 export const toMessage = (type: string, raw: any, usr:IMUser)=>{

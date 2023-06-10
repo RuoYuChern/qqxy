@@ -1,3 +1,29 @@
 <!--pages/xinsheng/xinsheng.wxml-->
 <view class="page">
+    <t-sticky offset-top="10">
+        <t-row t-class="xinsheng__space">
+            <t-col offset="1" span="22" t-class="light">
+               <t-textarea t-class="external-class" label="心声" maxlength="200" disableDefaultPadding="true" indicator/>
+            </t-col>
+            <t-col offset="17" span="4">
+                <t-button class="margin" icon="/assets/voice2.png" theme="primary" size="small" 
+                          bindtap="onSend">吼一吼</t-button>
+            </t-col>
+        </t-row>
+    </t-sticky>
+    <t-divider content="最新心声({{news.length}})"/>
+    <pg-scroll class="xinsheng">
+        <t-cell hover wx:for="{{news}}"wx:for-index="index" wx:key="index">
+            <view slot="description" class="xinsheng__content">
+                <text>{{item.content}}</text>
+                <t-badge offset="{{[-1, 1]}}" count="{{item.loveTimes}}" class="xinsheng__content-love">
+                    <t-icon name="heart" size="24" bind:click="onLoveClick" data-id="{{item.id}}"/>
+                </t-badge>
+            </view>
+            <view slot="title" class="xinsheng__titile">
+                <t-avatar image="{{item.avatar}}" size="small"/>
+                <text>{{item.nickName}}</text>
+            </view>>
+        </t-cell>
+    </pg-scroll>
 </view>

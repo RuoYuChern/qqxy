@@ -1,17 +1,21 @@
 <!--pages/yuedu/yuedu.wxml-->
 <view class="page">
-    <view class="page-body">
-        <view class="weui-panel">
-            <view class="weui-panel__bd">
-                <view class="weui-media-box weui-media-box_small-appmsg">
-                    <view class="weui-cells weui-cells_in-small-appmsg" 
-                    wx:for="{{articList}}" wx:for-index="index" wx:key="index" wx:for-item="wz">
-                        <wz-card id="{{wz.id}}" picture="{{wz.img}}" title="{{wz.title}}" 
-                                intro="{{wz.desc}}" author="simon.chen" time="2023.0603" 
-                                bindclick="blogClick"></wz-card>
-                    </view>
-                </view>
-            </view>
+    <t-divider content="最新美文({{articList.length}})"/>
+    <t-cell jump-type="navigateTo" url="/pages/blog/blog?id={{item.id}}&type={{item.type}}&url={{item.url}}" 
+        hover wx:for="{{articList}}" wx:for-index="index" wx:key="index">
+        <view slot="description" class="yuedu__content">
+            <view>{{item.desc}}</view>
+            <view>{{item.time}}</view>      
         </view>
-    </view>
+        <view slot="title" class="yuedu__titile">
+            <t-avatar image="{{item.img}}" size="small"/>
+            <text>{{item.title}}</text>
+        </view>
+        <view slot="right-icon">
+            <t-badge offset="{{[-1, 1]}}" count="{{item.loveTimes}}">
+                <t-icon name="thumb-up" size="24"/>
+            </t-badge> 
+        </view>
+    </t-cell>    
 </view>
+

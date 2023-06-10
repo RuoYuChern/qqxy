@@ -1,1 +1,45 @@
 /* pages/xinsheng/xinsheng.wxss */
+.xinsheng{
+    margin-top: 10rpx;   
+    margin-left: 10rpx;
+}
+
+.xinsheng__space{
+    margin-left: 10rpx;
+}
+
+.light {
+    background-color: #366ef4;
+}
+
+.light {
+    background-clip: content-box;
+    color: #fff;
+    font-size: 28rpx;
+    line-height: 96rpx;
+    margin-bottom: 32rpx;
+    text-align: center;
+}
+
+.xinsheng__titile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.xinsheng__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.xinsheng__content-love{
+    align-self:flex-end
+}
+
+.external-class {
+    height: 210rpx;
+}

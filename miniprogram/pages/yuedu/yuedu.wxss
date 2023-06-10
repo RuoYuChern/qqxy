@@ -1,6 +1,31 @@
 /* pages/yuedu/yuedu.wxss */
-@import '../../common.wxss';
-
 .wz{
-    margin-bottom: 15rpx;
+    margin-top: 10rpx;
+}
+
+.wz-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: right;
+}
+
+.yuedu__titile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.yuedu__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 10px;
+}
+
+.yuedu__content-love{
+    align-self:flex-end;
+    align-items: right;
 }

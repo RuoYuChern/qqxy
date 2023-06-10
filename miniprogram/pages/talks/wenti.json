@@ -1,4 +1,5 @@
 {
+    "navigationBarTitleText": "细语-解惑",
     "usingComponents": {
         "xinTalk":"../../components/talk/talk"
     }

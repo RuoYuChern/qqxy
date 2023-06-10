@@ -7,3 +7,14 @@
     --td-tab-bar-item-color: rgba(187, 187, 187, 0.822);
     --td-tab-bar-item-active-color: rgb(13, 173, 125);
 }
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home__bar{
+    bottom: 0;
+}

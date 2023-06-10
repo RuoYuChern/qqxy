@@ -1,0 +1,12 @@
+/* custom-tab-bar/taobar.wxss */
+.custom-tab-bar-wrapper {
+    pointer-events: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+.custom-tab-bar-wrapper .text {
+    font-size: 20rpx;
+}

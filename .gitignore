@@ -1,5 +1,6 @@
 dist/
 deploy_versions/
+.cloudbase/
 miniprogram/miniprogram_npm
 .temp/
 .rn_temp/

@@ -1,5 +1,4 @@
 <!--pages/login/login.wxml-->
-<page-meta root-font-size="system"></page-meta>
 <view class="page">
     <view class="container">
         <t-row>

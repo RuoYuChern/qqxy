@@ -8,7 +8,7 @@
             </t-col>
         </t-row>
         <t-row class="xy-card">
-            <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500">
+            <swiper indicator-dots="true" autoplay="true" interval="10000" duration="500">
                 <swiper-item wx:for="{{background}}" wx:key="*this">
                     <xy-card src="/assets/like.png" title="{{item}}" bindclick="cardClick">
                         <view class="xy-card__content xy-padding">这是一个基础卡片的示例。</view>
