@@ -8,6 +8,7 @@ Page({
         active: 0,
         logined: false,
         title:'细语-登录',
+        scrollIntoView:"pg-scroll",
         list:tabMenu
     },
     onLoad() {
@@ -22,8 +23,6 @@ Page({
         }
     },
     scroll(_e:any){
-        
-        //console.log(e)
     },
     onChange(e:any) {
         if(this.data.active != e.detail){

@@ -12,7 +12,7 @@
         </t-row>
     </t-sticky>
     <t-divider content="最新心声({{news.length}})"/>
-    <pg-scroll class="xinsheng">
+    <view class="xinsheng">
         <t-cell hover wx:for="{{news}}"wx:for-index="index" wx:key="index">
             <view slot="description" class="xinsheng__content">
                 <text>{{item.content}}</text>
@@ -25,5 +25,6 @@
                 <text>{{item.nickName}}</text>
             </view>>
         </t-cell>
-    </pg-scroll>
+    </view>
+    <t-back-top theme="{{backTopTheme}}" text="{{backTopText}}" bind:to-top="onToTop"></t-back-top>
 </view>

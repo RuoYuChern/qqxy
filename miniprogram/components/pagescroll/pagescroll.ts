@@ -1,6 +1,5 @@
 // components/pagescroll/pagescroll.ts
 Component({
-
     options: {
         virtualHost: true
     },

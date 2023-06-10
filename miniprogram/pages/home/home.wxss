@@ -16,5 +16,9 @@
 }
 
 .home__bar{
+    width: 100%;
+    height: 200rpx;
+    position: sticky;
+    position: -webkit-sticky;    
     bottom: 0;
 }

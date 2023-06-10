@@ -5,17 +5,14 @@ Page({
      * 页面的初始数据
      */
     data: {
-        id: "",
-        type:"",
-        url:""
+        blog_url:""
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(option:any) {
-        this.setData({id: option.id, type: option.type, url:option.url})
-        
+        this.setData({blog_url:option.url})  
     },
 
     /**

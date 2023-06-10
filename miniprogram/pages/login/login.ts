@@ -17,7 +17,8 @@ Component({
             this.setData({avatarUrl, })
         },
         login(){
-            if (this.data.nickName.trim() !== '' && this.data.avatarUrl !== defaultAvatarUrl) {
+            //&& this.data.avatarUrl !== defaultAvatarUrl
+            if (this.data.nickName.trim() !== '') {
                 // 页面跳转
                 let app = getApp<TaoIAppOption>();
                 app.globalData.dao.loginUser.nickName = this.data.nickName

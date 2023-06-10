@@ -2,7 +2,6 @@
     "enablePullDownRefresh": true,
     "component": true,
     "usingComponents": {
-        "pg-scroll":"../../components/pagescroll/pagescroll",
         "t-row": "tdesign-miniprogram/row/row",
         "t-col": "tdesign-miniprogram/col/col",
         "t-textarea": "tdesign-miniprogram/textarea/textarea",
@@ -12,6 +11,7 @@
         "t-cell": "tdesign-miniprogram/cell/cell",
         "t-avatar": "tdesign-miniprogram/avatar/avatar",
         "t-badge": "tdesign-miniprogram/badge/badge",
+        "t-back-top": "tdesign-miniprogram/back-top/back-top",
         "t-icon": "tdesign-miniprogram/icon/icon"
     }
 }

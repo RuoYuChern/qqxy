@@ -6,6 +6,7 @@
         "t-avatar": "tdesign-miniprogram/avatar/avatar",
         "t-badge": "tdesign-miniprogram/badge/badge",
         "t-divider": "tdesign-miniprogram/divider/divider",
+        "t-back-top": "tdesign-miniprogram/back-top/back-top",
         "t-icon": "tdesign-miniprogram/icon/icon"        
     }
 }

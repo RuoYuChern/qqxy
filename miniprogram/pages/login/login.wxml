@@ -1,6 +1,6 @@
 <!--pages/login/login.wxml-->
 <view class="page">
-    <view class="container">
+    <view class="login__container">
         <t-row>
             <t-col class="title">授权微信登陆</t-col>
         </t-row>

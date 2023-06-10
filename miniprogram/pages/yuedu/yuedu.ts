@@ -13,6 +13,8 @@ Component({
      * 组件的初始数据
      */
     data: {
+        backTopTheme:'round',
+        backTopText:'返回顶部',        
         currentPages: -1,
         articList: Array<Article>(),
     },
@@ -63,7 +65,7 @@ Component({
     },
     pageLifetimes:{
         show: function() {
-            this.getTabBar().init();
+
         }
     },
     /**
@@ -75,6 +77,9 @@ Component({
         },
         onLoveClick(e: any){
             console.log("onLoveClick:", e)
+        },
+        onToTop(){
+
         }
     }
 })

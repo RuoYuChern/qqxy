@@ -16,4 +16,5 @@
             </t-badge> 
         </view>        
     </t-cell>
+    <t-back-top theme="{{backTopTheme}}" text="{{backTopText}}" bind:to-top="onToTop"></t-back-top>    
 </view>

@@ -3,6 +3,7 @@
     "projectname": "xxqy",
     "setting": {
         "compileHotReLoad": false,
-        "lazyloadPlaceholderEnable": true
+        "lazyloadPlaceholderEnable": true,
+        "urlCheck": true
     }
 }

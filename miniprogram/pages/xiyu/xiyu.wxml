@@ -1,6 +1,6 @@
 <!--pages/xiyu/xiyu.wxml-->
 <view class="page">
-    <view class="container">
+    <view class="xy__container">
         <t-row>
             <t-col class="avatar">
                 <t-image src="{{userInfo.avatar}}" width="72" height="72" shape="circle"/>

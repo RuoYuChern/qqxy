@@ -13,6 +13,8 @@ Component({
      * 组件的初始数据
      */
     data: {
+        backTopTheme:'round',
+        backTopText:'返回顶部',        
         loaded: false,
         musics: Array<Music>(),
     },
@@ -39,7 +41,6 @@ Component({
     },
     pageLifetimes:{
         show: function() {
-            this.getTabBar().init();
         }
     },
     /**
@@ -48,6 +49,9 @@ Component({
     methods: {
         scroll(e:any){
             console.log(e)
+        },
+        onToTop(){
+            
         }
 
     }

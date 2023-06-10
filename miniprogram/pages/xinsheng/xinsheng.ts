@@ -15,6 +15,8 @@ Component({
      */
     data: {
         loaded: false,
+        backTopTheme:'round',
+        backTopText:'返回顶部',
         news: Array<XinSheng>(),
     },
 
@@ -27,7 +29,7 @@ Component({
             var usr = dao.loginUser;
             let list = this.data.news;
             var i;
-            for(i= 0; i < 10; i++){
+            for(i= 0; i < 50; i++){
                 var xs = new XinSheng();
                 xs.id = i.toString(10);
                 xs.avatar = usr.avatar;
@@ -44,7 +46,6 @@ Component({
     },
     pageLifetimes:{
         show: function() {
-            this.getTabBar().init();
         }
     },
     /**
@@ -69,6 +70,9 @@ Component({
             if(isFind){
                 this.setData({news:list})
             }
+        },
+        onToTop(){
+
         }
 
     }

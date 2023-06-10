@@ -2,8 +2,13 @@
 @import '../../common.wxss';
 
 
-.avatar{
-    margin-top: 30rpx;
+
+.xy__container{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .xy-card{

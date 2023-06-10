@@ -12,6 +12,8 @@
     background-color: #366ef4;
 }
 
+.t
+
 .light {
     background-clip: content-box;
     color: #fff;

@@ -1,2 +1,6 @@
 <!--pages/blog/blog.wxml-->
-<text>coming soom</text>
+<view class="page-body">
+  <view class="page-section blog-section-gap">
+    <web-view src="{{blog_url}}"></web-view>
+  </view>
+</view>
