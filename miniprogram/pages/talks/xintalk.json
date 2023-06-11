@@ -1,6 +1,6 @@
 {
     "navigationBarTitleText": "细语-心聊",
     "usingComponents": {
-        "xinTalk":"../../../components/talk/talk"
+        "xinTalk":"../../components/talk/talk"
     }
 }

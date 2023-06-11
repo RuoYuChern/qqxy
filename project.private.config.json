@@ -2,11 +2,7 @@
     "description": "纤纤细语",
     "projectname": "xxqy",
     "setting": {
-        "compileHotReLoad": true,
-        "lazyloadPlaceholderEnable": false,
-        "urlCheck": false,
-        "useIsolateContext": false,
-        "autoAudits": false
+        "compileHotReLoad": true
     },
     "libVersion": "2.32.1"
 }
