@@ -1,4 +1,6 @@
 {
     "navigationBarTitleText": "细语-阅读",
-    "usingComponents": {}
+    "usingComponents": {
+        "towxml":"../../towxml/towxml"
+    }
 }

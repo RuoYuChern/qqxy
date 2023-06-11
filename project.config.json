@@ -23,7 +23,7 @@
         "es6": true,
         "enhance": true,
         "coverView": false,
-        "postcss": false,
+        "postcss": true,
         "showShadowRootInWxmlPanel": false,
         "ignoreUploadUnusedFiles": true
     },

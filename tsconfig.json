@@ -28,7 +28,7 @@
   },
   "include": [
     "./**/*.ts"
-, "miniprogram/utils/taopage.ts", "miniprogram/utils/taotheme.ts"  ],
+  ],
   "exclude": [
     "node_modules"
   ]

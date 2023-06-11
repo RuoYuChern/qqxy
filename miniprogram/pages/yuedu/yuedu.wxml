@@ -1,7 +1,7 @@
 <!--pages/yuedu/yuedu.wxml-->
 <view class="page">
     <t-divider content="最新美文({{articList.length}})"/>
-    <t-cell jump-type="navigateTo" url="/pages/blog/blog?&url={{item.url}}" 
+    <t-cell jump-type="navigateTo" url="../../blogs/pages/blog/blog?&url={{item.url}}" 
         hover wx:for="{{articList}}" wx:for-index="index" wx:key="index">
         <view slot="description" class="yuedu__content">
             <view>{{item.desc}}</view>

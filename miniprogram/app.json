@@ -5,10 +5,10 @@
         "pages/xinsheng/xinsheng",
         "pages/yinyue/yinyue",
         "pages/me/me",
-        "pages/talks/xintalk",
+		"pages/blog/blog",   
+		"pages/talks/xintalk",
         "pages/talks/zhongle",
-        "pages/talks/wenti",
-        "pages/blog/blog"
+        "pages/talks/wenti"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -18,10 +18,9 @@
     },
     "usingComponents": {},
     "networkTimeout": {
-        "request": 3000
+        "request": 60000
     },
-    "useExtendedLib": {
-        
+    "useExtendedLib": {   
     },
     "lazyCodeLoading": "requiredComponents",
     "sitemapLocation": "sitemap.json"
